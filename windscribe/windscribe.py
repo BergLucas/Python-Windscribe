@@ -1,12 +1,4 @@
 
-__all__ = [
-    'account',
-    'connect',
-    'locations',
-    'login',
-    'logout',
-]
-
 import os
 import random
 import re

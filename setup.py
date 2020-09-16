@@ -10,19 +10,12 @@ def construct_package_version():
 
 def package_details():
 
-    package_name = 'python-windscribe'
-    
-    repo_url = 'https://github.com/Dayzpd/Python-Windscribe'
-    
-    author = 'dayzpd'
-    
-    package_license = 'MIT'
-    
     classifiers = [
         'Intended Audience :: Developers',
-        'License :: MIT License',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries',
+        'Development Status :: 2 - Pre-Alpha',
     ]
 
     requirements = [
@@ -32,12 +25,15 @@ def package_details():
     ]
 
     return {
-        'author'           : author,
+        'author'           : 'Dayzpd',
+        'author_email'     : 'zach@dayzpd.com',
+        'description'      : 'Python Windscribe VPN CLI wrapper.',
+        'keywords'         : 'windscribe vpn',
         'classifiers'      : classifiers,
-        'license'          : package_license,
-        'name'             : package_name,
-        'packages'         : setuptools.find_packages(include=[ 'windscribe' ]),
-        'url'              : repo_url,
+        'license'          : 'MIT',
+        'name'             : 'python-windscribe',
+        'packages'         : [ 'windscribe' ],
+        'url'              : 'https://github.com/Dayzpd/Python-Windscribe',
         'version'          : construct_package_version(),
         'install_requires' : requirements,
     }

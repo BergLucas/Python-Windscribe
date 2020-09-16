@@ -1,5 +1,20 @@
 # Python-Windscribe
 
+## Intro
+
+I had purchased a lifetime subscription to Windscribe a few years ago and 
+recently noticed that they had released a CLI. Being interested in web crawling,
+I threw together this basic CLI wrapper in an afternoon to use on some of my 
+personal projects. I plan on making updates soon to cover more of the CLI.
+
+**NOTE:** *I am in no way affiliated with Windscribe.*
+
+## Install
+
+```bash
+$ pip install python-windscribe
+```
+
 ## Usage
 
 ### Login
@@ -29,6 +44,9 @@ Connects to the best server by default:
 ```python
 windscribe.connect()
 ```
+
+**NOTE:** *Calling connect multiple times will just cause the VPN to reconnect
+to the specified location.*
 
 Connect to a random location:
 
