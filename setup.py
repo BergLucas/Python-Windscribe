@@ -1,15 +1,14 @@
-
 from datetime import datetime, timezone
 import setuptools
 
-def construct_package_version():
 
+def construct_package_version():
     current_date = datetime.now(tz=timezone.utc)
 
     return f'{current_date.year}.{current_date.month}.{current_date.day}'
 
-def package_details():
 
+def package_details():
     classifiers = [
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -25,17 +24,17 @@ def package_details():
     ]
 
     return {
-        'author'           : 'Dayzpd',
-        'author_email'     : 'zach@dayzpd.com',
-        'description'      : 'Python Windscribe VPN CLI wrapper.',
-        'keywords'         : 'windscribe vpn',
-        'classifiers'      : classifiers,
-        'license'          : 'MIT',
-        'name'             : 'python-windscribe',
-        'packages'         : [ 'windscribe' ],
-        'url'              : 'https://github.com/Dayzpd/Python-Windscribe',
-        'version'          : construct_package_version(),
-        'install_requires' : requirements,
+        'author': 'Dayzpd',
+        'author_email': 'zach@dayzpd.com',
+        'description': 'Python Windscribe VPN CLI wrapper.',
+        'keywords': 'windscribe vpn',
+        'classifiers': classifiers,
+        'license': 'MIT',
+        'name': 'python-windscribe',
+        'packages': ['windscribe'],
+        'url': 'https://github.com/Dayzpd/Python-Windscribe',
+        'version': construct_package_version(),
+        'install_requires': requirements,
     }
 
-setuptools.setup(**package_details())
+# setuptools.setup(**package_details())
