@@ -4,6 +4,8 @@ __all__ = [
     'locations',
     'login',
     'logout',
+    'status',
+    'disconnect'
 ]
 
 from .windscribe import (
@@ -12,4 +14,6 @@ from .windscribe import (
     locations,
     login,
     logout,
+    status,
+    disconnect
 )
