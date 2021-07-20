@@ -1,19 +1,29 @@
 __all__ = [
-    'account',
-    'connect',
-    'locations',
-    'login',
-    'logout',
-    'status',
-    'disconnect'
+    "version",
+    "locations",
+    "random_connect",
+    "connect",
+    "disconnect",
+    "login",
+    "logout",
+    "status",
+    "account",
+    "WindscribeLocation",
+    "WindscribeStatus",
+    "WindscribeAccount",
 ]
 
 from .windscribe import (
-    account,
-    connect,
+    version,
     locations,
+    random_connect,
+    connect,
+    disconnect,
     login,
     logout,
     status,
-    disconnect
+    account,
+    WindscribeLocation,
+    WindscribeStatus,
+    WindscribeAccount,
 )

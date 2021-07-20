@@ -14,6 +14,10 @@ personal projects. I plan on making updates soon to cover more of the CLI.
 ```bash
 $ pip install python-windscribe
 ```
+or
+```bash
+$ python setup.py install
+```
 
 ## Usage
 
@@ -28,6 +32,14 @@ import windscribe
 windscribe.login('<user>', '<password>')
 ```
 
+### Logout
+
+Logout from the Windscribe CLI.
+
+```python
+windscribe.logout()
+```
+
 ### Get locations
 
 Returns a list of `WindscribeLocation` instances; each of which have the
@@ -39,7 +51,7 @@ location_list = windscribe.locations()
 
 ### Connect
 
-Connects to the best server by default:
+Connects to the best server by default.
 
 ```python
 windscribe.connect()
@@ -51,12 +63,12 @@ to the specified location.*
 Connect to a random location:
 
 ```python
-windscribe.connect(rand=True)
+windscribe.random_connect()
 ```
 
 Connect to a specific location using a string:
 
-**NOTE:** *You can use a given location's `name`, `abbrev`, `city`, or `label`.*
+**NOTE:** *You can use a given location's `name`, `abbrev`, `city`, `label` or `pro`.*
 
 ```python
 windscribe.connect('BBQ')
@@ -76,14 +88,36 @@ bbq = get_barbecue()
 windscribe.connect(bbq)
 ```
 
+### Disconnect
+
+Disconnect from the Windscribe server.
+
+```python
+windscribe.disconnect()
+```
+
 ### Account Details
+
+Returns a `WindscribeAccount` instance which has the
+following attributes: `username`, `current_usage`, `current_usage_unit`, `max_usage`, `max_usage_unit`, and `plan`.
 
 ```python
 windscribe.account()
 ```
 
-### Logout
+### Version
+
+Gets the version of the Windscribe CLI.
 
 ```python
-windscribe.logout()
+windscribe.version()
+```
+
+### Status
+
+Returns a `WindscribeStatus` instance which has the
+following attributes: `pid`, `status`, `uptime`, `cpu_usage`, `mem_usage`, `ip`, and `connected`.
+
+```python
+windscribe.status()
 ```
